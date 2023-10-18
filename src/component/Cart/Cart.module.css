@@ -1,0 +1,11 @@
+.clear_btn:hover{
+color: white!important;
+background-color: #DC3545!important;
+}
+.remove_btn:hover{
+    color: white!important;
+}
+.cart{
+    max-height: 80vh;
+    overflow-y: auto;
+}

@@ -1,0 +1,14 @@
+
+.delete {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+tbody tr:hover .delete{
+    opacity: 1;
+}
+
+.tableScroll{
+    max-height: 50vh;
+    overflow-y: auto;
+}
