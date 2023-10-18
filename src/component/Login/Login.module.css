@@ -1,4 +1,14 @@
 
+.change_width{
+    width: 75%;
+  }
+
+.change_direction{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width:992px){
     .change_direction{
         flex-direction: column!important;

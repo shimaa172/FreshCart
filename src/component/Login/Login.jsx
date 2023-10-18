@@ -57,7 +57,7 @@ export default function Login() {
       <title>Login</title>
     </Helmet>
     <ToastContainer />
-    <div className={`${Style.change_width} w-75 mx-auto px-5`} >
+    <div className={`${Style.change_width}  mx-auto px-5`} >
       <h2>Login Now:</h2>
       {error ? <div className="alert alert-danger">{error}</div> : ''}
       <form onSubmit={Formik.handleSubmit}>
@@ -67,7 +67,7 @@ export default function Login() {
         <label htmlFor="password">password : </label>
         <input onChange={Formik.handleChange} onBlur={Formik.handleBlur} value={Formik.values.password} id="password" type="password" name="password" className="form-control mb-2 " />
         {Formik.errors.password && Formik.touched.password ? <div className="alert alert-danger">{Formik.errors.password}</div> : ''}
-        <div className={`d-flex justify-content-between align-items-center ${Style.change_direction}`}>
+        <div className={`${Style.change_direction}`}>
           {!loading ? <button disabled={!(Formik.isValid && Formik.dirty)} type="submit" className="btn mt-4 text-white bg-main"> Login </button> :
             <button type="button" className="btn mt-4 text-white bg-main">
               <ThreeDots
