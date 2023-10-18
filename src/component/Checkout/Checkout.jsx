@@ -44,7 +44,7 @@ export default function Checkout() {
       <title>Checkout</title>
     </Helmet>
     <ToastContainer />
-    <div className='bg-main-light rounded p-3 shadow w-50 mx-auto'>
+    <div className={`${Style.change_width} bg-main-light rounded p-3 shadow  mx-auto`}>
       <h1 className="h3 text-center">shipping Address</h1>
       <form onSubmit={Formik.handleSubmit} className=' gap-3 w-75 mx-auto '>
         <label htmlFor="details">Details: </label>

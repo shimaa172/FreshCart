@@ -25,7 +25,7 @@ export default function MyOrders() {
         <meta charSet="utf-8" />
         <title>MyOrders</title>
       </Helmet>
-  <div className={`${Style.order} bg-main-light p-4 w-75 mx-auto rounded shadow`}>
+  <div className={`${Style.order} bg-main-light p-4 mx-auto rounded shadow`}>
     <h1  className="text-center h4">All Orders</h1>
     {UserOrders?.map((order , index)=>( <div key={order._id} className='row align-items-center border rounded m-2 p-2'>
       <h3 className="h6">Order:{index+1}</h3>
