@@ -5,13 +5,13 @@
 
 .change_direction{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 @media (max-width:992px){
     .change_direction{
-        flex-direction: column!important;
+        flex-direction: column;
     }
 
     .change_width{
