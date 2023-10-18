@@ -44,7 +44,7 @@ export default function UpdatePassword() {
       <title>UpdatePassword</title>
     </Helmet>
     <ToastContainer />
-    <div className='bg-main-light w-75 mx-auto rounded shadow p-3'>
+    <div className={`${Style.change_width} bg-main-light w-75 mx-auto rounded shadow p-3`}>
       <h1 className="h4 text-center">Update User Password</h1>
       <form onSubmit={Formik.handleSubmit} className='vstack gap-3 w-75 mx-auto '>
         <div className='form-item'>

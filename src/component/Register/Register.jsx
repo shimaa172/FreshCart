@@ -58,7 +58,7 @@ export default function Register() {
       <title>Register</title>
     </Helmet>
     <ToastContainer />
-    <div className='w-75 mx-auto px-5'>
+    <div className={`${Style.change_width} w-75 mx-auto px-5`}>
       <h2>Registert Now:</h2>
       {error ? <div className="alert alert-danger">{error}</div> : ''}
       <form onSubmit={Formik.handleSubmit}>

@@ -1,1 +1,5 @@
-.Register {}
+@media (max-width:992px){
+    .change_width{
+        width: 90%!important;
+      }
+}

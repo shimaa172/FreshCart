@@ -1,1 +1,11 @@
-.Login {}
+
+@media (max-width:992px){
+    .change_direction{
+        flex-direction: column!important;
+    }
+
+    .change_width{
+        width: 90%!important;
+      }
+}
+
