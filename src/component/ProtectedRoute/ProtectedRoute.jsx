@@ -5,19 +5,16 @@ import { Navigate, useLocation } from 'react-router-dom'
 
 
 export default function ProtectedRoute(props) {
+
   const location = useLocation();
   const { pathname } = location;
-  console.log(pathname)
+  // console.log(pathname)
 
   if (localStorage.getItem('userToken')) {
     if(pathname == '/FreshCart/'){
       return <Navigate to={'/'} />
   
     }
-    else if (pathname == '/'){
-      return <Navigate to={'/FreshCart/'}/>
-    }
-
     return props.children
   }
   
