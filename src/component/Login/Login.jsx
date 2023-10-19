@@ -34,7 +34,7 @@ export default function Login() {
 
       toast.success("🦄 You are logged in successfully!", { autoClose: 2000 });
       setTimeout(() => {
-        navigate('https://shimaa172.github.io/')
+        navigate('/')
       }, 3000);
     }
   }
