@@ -1,12 +1,12 @@
 import { createContext } from "react";
 import axios from 'axios';
 import jwt_decode from "jwt-decode";
-import {useLocation} from "react-router-dom"
+
 
 export let OrderContext = createContext(0)
 
 export default function OrderContextProvider(props) {
-    const location = useLocation();
+
     let userToken = localStorage.getItem('userToken')
     if (userToken) {
         var decoded = jwt_decode(userToken);
@@ -31,7 +31,7 @@ export default function OrderContextProvider(props) {
 
     async function checkout(cartId, shippingAddress) {
         try {
-            const res = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${location.pathname}`,
+            const res = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://shimaa172.github.io`,
                 {
                     shippingAddress
                 },
