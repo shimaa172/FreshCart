@@ -14,10 +14,10 @@ export default function ProtectedRoute(props) {
       return <Navigate to={'/'} />
   
     }
-    else{
-      return <Navigate to={'/FreshCart/'} />
+    else if (pathname == '/'){
+      return <Navigate to={'/FreshCart/'}/>
     }
-    
+
     return props.children
   }
   
