@@ -5,7 +5,6 @@ import { Navigate, useLocation } from 'react-router-dom'
 
 
 export default function ProtectedRoute(props) {
-
   const location = useLocation();
   const { pathname } = location;
   console.log(pathname)
@@ -15,6 +14,10 @@ export default function ProtectedRoute(props) {
       return <Navigate to={'/'} />
   
     }
+    else{
+      return <Navigate to={'/FreshCart/'} />
+    }
+    
     return props.children
   }
   
