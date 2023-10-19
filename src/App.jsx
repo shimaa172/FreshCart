@@ -54,7 +54,7 @@ export default function App() {
     { path: 'verifyCode', element: <VerifyResetCode /> },
     { path: 'updatepass', element: <UpdatePassword /> },
     { path: 'profile', element: <ProtectedRoute><Profile /></ProtectedRoute> },
-    { path: 'allorders', element:<MyOrders /> },
+    { path: 'allorders', element: <ProtectedRoute><MyOrders /></ProtectedRoute> },
     { path: 'checkout/:id', element: <ProtectedRoute><Checkout /></ProtectedRoute> },
     { path: '*', element:<ProtectedRoute><Notfound /></ProtectedRoute>} ]
     }])

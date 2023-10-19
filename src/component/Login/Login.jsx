@@ -17,6 +17,8 @@ export default function Login() {
   let navigate = useNavigate()
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(false)
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('')
   let { setUserToken } = useContext(UserTokenContext)
 
   async function loginSubmit(values) {
@@ -38,6 +40,7 @@ export default function Login() {
       }, 3000);
     }
   }
+  
 
   let validationSchema = Yup.object({
     email: Yup.string('email inValid').required('email is required'),
@@ -67,7 +70,7 @@ export default function Login() {
         <label htmlFor="password">password : </label>
         <input onChange={Formik.handleChange} onBlur={Formik.handleBlur} value={Formik.values.password} id="password" type="password" name="password" className="form-control mb-2 " />
         {Formik.errors.password && Formik.touched.password ? <div className="alert alert-danger">{Formik.errors.password}</div> : ''}
-        <div className={`${Style.change_direction}`}>
+        <div className={`d-flex justify-content-between align-items-center`}>
           {!loading ? <button disabled={!(Formik.isValid && Formik.dirty)} type="submit" className="btn mt-4 text-white bg-main"> Login </button> :
             <button type="button" className="btn mt-4 text-white bg-main">
               <ThreeDots
@@ -81,7 +84,7 @@ export default function Login() {
                 visible={true}
               />
             </button>}
-          <Link id='link'  to={'/forgot'}>ForgotPassword</Link>
+          <Link id='link' className='mt-4'  to={'/forgot'}>ForgotPassword</Link>
         </div>
       </form>
     </div>

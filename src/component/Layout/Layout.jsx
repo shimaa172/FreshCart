@@ -11,10 +11,19 @@ export default function Layout() {
 
   let { setUserToken } = useContext(UserTokenContext)
 
+  
+
   useEffect(() => {
     if (localStorage.getItem('userToken')) {
       setUserToken(localStorage.getItem('userToken'))
     }
+
+    // Prompt confirmation when reload page is triggered
+    window.onbeforeunload = () => { return "" };
+        
+    // Unmount the window.onbeforeunload event
+    return () => { window.onbeforeunload = null };
+    
 
   }, [])
   return <>
