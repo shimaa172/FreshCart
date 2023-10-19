@@ -11,7 +11,7 @@ export default function ProtectedRoute(props) {
   console.log(pathname)
 
   if (localStorage.getItem('userToken')) {
-    if(pathname == '/FreshCart'){
+    if(pathname == '/FreshCart/'){
       return <Navigate to={'/'} />
   
     }
