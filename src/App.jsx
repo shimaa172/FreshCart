@@ -37,7 +37,7 @@ import { store } from './Redux/Store'
 
 export default function App() {
   let routers = createBrowserRouter([
-    {path: '/', element: <Layout />, children:[
+    {path: 'https://shimaa172.github.io/', element: <Layout />, children:[
     {index:true, element: <ProtectedRoute><Home /></ProtectedRoute> },
     { path: 'products', element: <ProtectedRoute><Products /></ProtectedRoute> },
     { path: 'productDetails/:id', element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },
