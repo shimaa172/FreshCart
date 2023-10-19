@@ -39,7 +39,7 @@ export default function ForgotPassword() {
       <title>ForgotPassword</title>
     </Helmet>
     <ToastContainer />
-    <div className={` ${Style.change_width} bg-main-light rounded p-3 shadow  mx-auto`}>
+    <div className={` ${Style.change_width} bg-main-light rounded py-3 shadow  mx-auto`}>
       <h1 className="text-center h3">Forgot Password</h1>
       <form onSubmit={Formik.handleSubmit} className='vstack gap-3'>
         <label htmlFor="email">Email : </label>

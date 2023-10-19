@@ -9,10 +9,14 @@ background-color: #DC3545!important;
     max-height: 80vh;
     overflow-y: auto;
     width: 75%;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 @media (max-width:992px){
     .cart{
         width: 98%!important;
+        padding-left: 0!important;
+        padding-right: 0!important;
     }
 }

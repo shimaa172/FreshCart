@@ -57,7 +57,7 @@ export default function Login() {
       <title>Login</title>
     </Helmet>
     <ToastContainer />
-    <div className={`${Style.change_width}  mx-auto px-5`} >
+    <div className={`${Style.change_width} mx-auto`} >
       <h2>Login Now:</h2>
       {error ? <div className="alert alert-danger">{error}</div> : ''}
       <form onSubmit={Formik.handleSubmit}>

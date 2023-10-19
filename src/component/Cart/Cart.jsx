@@ -88,7 +88,7 @@ export default function Cart() {
           {cartItems && cartItems.data.products.length ? (
             <>
               <div
-                className={`${Style.cart} bg-main-light p-4 mx-auto rounded shadow`}
+                className={`${Style.cart} bg-main-light py-4 mx-auto rounded shadow`}
               >
                 <h1 className="text-center h3">Shop Cart</h1>
                 <button
