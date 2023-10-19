@@ -8,8 +8,6 @@ export default function ProtectedRoute(props) {
 
   const location = useLocation();
   const { pathname } = location;
-  console.log(window.location)
-  // console.log(pathname)
 
   if (localStorage.getItem('userToken')) {
     if(pathname == '/FreshCart/' || pathname == '/FreshCart'){

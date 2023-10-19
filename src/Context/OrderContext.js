@@ -5,8 +5,6 @@ import jwt_decode from "jwt-decode";
 export let OrderContext = createContext(0)
 
 export default function OrderContextProvider(props) {
-    let localUrl = window.location.origin
-    // console.log(localUrl)
 
     let userToken = localStorage.getItem('userToken')
     if (userToken) {
@@ -29,10 +27,10 @@ export default function OrderContextProvider(props) {
     }
 
 
-    async function checkout(cartId, localUrl ,shippingAddress) {
+    async function checkout(cartId,shippingAddress) {
         
         try {
-            const res = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${localUrl}`,
+            const res = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${ window.location.origin}`,
                 {
                     shippingAddress
                 },
