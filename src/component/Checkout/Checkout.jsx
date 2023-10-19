@@ -7,9 +7,10 @@ import { toast, ToastContainer } from "react-toastify";
 import {OrderContext} from "../../Context/OrderContext"
 import { useParams } from 'react-router-dom'
 
+
 export default function Checkout() {
 
-  let { checkout } = useContext(OrderContext);
+  let { checkout} = useContext(OrderContext);
   let {id} = useParams()
 
   async function CheckoutSubmit(values) {

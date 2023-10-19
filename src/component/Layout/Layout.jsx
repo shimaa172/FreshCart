@@ -5,9 +5,8 @@ import Footer from '../Footer/Footer'
 import { Outlet } from 'react-router-dom'
 import { UserTokenContext } from '../../Context/UserTokenContext'
 
-
-
 export default function Layout() {
+
 
 
   let { setUserToken } = useContext(UserTokenContext)

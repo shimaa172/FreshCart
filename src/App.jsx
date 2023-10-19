@@ -56,7 +56,7 @@ export default function App() {
     { path: 'profile', element: <ProtectedRoute><Profile /></ProtectedRoute> },
     { path: 'allorders', element: <ProtectedRoute><MyOrders /></ProtectedRoute> },
     { path: 'checkout/:id', element: <ProtectedRoute><Checkout /></ProtectedRoute> },
-    { path: '*', element: <ProtectedRoute><Notfound /></ProtectedRoute> } ]
+    { path: '*', element:<ProtectedRoute><Notfound /></ProtectedRoute>} ]
     }])
   return <>
   <OrderContextProvider>

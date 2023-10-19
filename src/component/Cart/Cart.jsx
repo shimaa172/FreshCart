@@ -62,7 +62,6 @@ export default function Cart() {
   async function getCartItems() {
     setLoading(true);
     let { data } = await getCart();
-    console.log({ getData: data });
     setcartItems(data);
     if (data?.status === "success") {
       setLoading(false);
