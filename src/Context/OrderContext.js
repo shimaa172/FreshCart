@@ -30,7 +30,7 @@ export default function OrderContextProvider(props) {
     async function checkout(cartId,shippingAddress) {
         
         try {
-            const res = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://shimaa172.github.io/FreshCart/#`,
+            const res = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://shimaa172.github.io/FreshCart/#/`,
                 {
                     shippingAddress
                 },

@@ -23,6 +23,9 @@ cursor: pointer;
 color: rgb(10,173,10);
 margin-bottom:20px;
 }
+@media (max-width:600px){
+    display:none!important;
+}
 
 @media (max-width:992px) {
     left:87%!important;
