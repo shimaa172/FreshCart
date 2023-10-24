@@ -11,7 +11,7 @@ export default function ProtectedRoute(props) {
   
   
   else {
-    return <Navigate to={'/login'} />
+    return <Navigate to={'login'} />
   }
 
 
