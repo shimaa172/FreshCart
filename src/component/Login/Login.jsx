@@ -17,8 +17,6 @@ export default function Login() {
   let navigate = useNavigate()
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(false)
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('')
   let { setUserToken } = useContext(UserTokenContext)
 
   async function loginSubmit(values) {
