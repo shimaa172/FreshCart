@@ -164,7 +164,7 @@ export default function Cart() {
                 </Link>
               </div>
               <div className="border rounded shadow-sm p-3 mt-5 mx-auto w-50">
-                <Link to={`allorders`} className="text-decoration-none">
+                <Link to={`/FreshCart/allorders`} className="text-decoration-none">
                   <button className="btn text-white bg-main w-100" tabIndex="0">
                     My Orders
                   </button>
