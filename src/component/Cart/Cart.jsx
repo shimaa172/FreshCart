@@ -84,7 +84,7 @@ export default function Cart() {
         <link rel="shortcut icon" href="../../../src/assets/favicon_io/favicon.ico"></link>
         <title>Cart</title>
       </Helmet>
-      {!loading ?(
+      {!loading ? (
         <>
           {cartItems && cartItems.data.products.length ? (
             <>

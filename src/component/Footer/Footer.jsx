@@ -9,7 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function Footer() {
-  const [input, setInput] = useState({ email: "" });
   let navigate = useNavigate()
 
   async function formSubmit() {

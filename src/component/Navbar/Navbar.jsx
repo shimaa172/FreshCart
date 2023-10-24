@@ -1,4 +1,4 @@
-import React, { useContext} from 'react'
+import React, { useContext } from 'react'
 import Style from './Navbar.module.css'
 import { Link, NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
@@ -10,8 +10,8 @@ import { WhishlistContext } from '../../Context/WhishlistContext'
 
 export default function Navbar() {
   let { userToken, setUserToken } = useContext(UserTokenContext)
-  let {numOfCartItems} =useContext(CartContext)
-  let {count} =useContext(WhishlistContext)
+  let { numOfCartItems } = useContext(CartContext)
+  let { count } = useContext(WhishlistContext)
 
   let navigate = useNavigate()
   function SignOut() {

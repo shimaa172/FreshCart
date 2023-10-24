@@ -48,7 +48,7 @@ export default function ResetPassword() {
         <label htmlFor="newPassword">newPassword : </label>
         <input onChange={Formik.handleChange} onBlur={Formik.handleBlur} value={Formik.values.newPassword} id="newPassword" placeholder='Your newPassword' type="password" name="newPassword" className="form-control" />
         {Formik.errors.newPassword && Formik.touched.newPassword ? <div className="alert alert-danger">{Formik.errors.newPassword}</div> : ''}
-        <button disabled={!(Formik.isValid && Formik.dirty)} type="submit" className="btn mt-4 text-white bg-main"> Done </button> 
+        <button disabled={!(Formik.isValid && Formik.dirty)} type="submit" className="btn mt-4 text-white bg-main"> Done </button>
       </form>
     </div>
   </>

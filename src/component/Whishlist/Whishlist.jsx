@@ -61,7 +61,7 @@ export default function Whishlist() {
         <link rel="shortcut icon" href="../../../src/assets/favicon_io/favicon.ico"></link>
         <title>Whishlist</title>
       </Helmet>
-      {WhishlistItems? <>{WhishlistItems.data.length ?
+      {WhishlistItems ? <>{WhishlistItems.data.length ?
         <div>
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-6 justify-content-center">
             {WhishlistItems?.data.map((product) => (

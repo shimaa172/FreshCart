@@ -55,10 +55,10 @@ export default function CategorySlider() {
   function getCategorySlider() {
     return axios.get(`https://ecommerce.routemisr.com/api/v1/categories`)
   }
-  let { data ,isLoading } = useQuery('Categories', getCategorySlider)
+  let { data, isLoading } = useQuery('Categories', getCategorySlider)
 
   return <>
-  {!isLoading?<div>
+    {!isLoading ? <div>
       <h2>Shop Popular Categories</h2>
       <div className='row'>
         <Slider1 {...settings1} className={`${Style.slider1}`}>
@@ -110,14 +110,14 @@ export default function CategorySlider() {
           </div>)}
         </Slider4>
       </div>
-    </div>:<div className=' w-100 vh-100 d-flex justify-content-center align-items-center'><BallTriangle
-          height={100}
-          width={100}
-          radius={5}
-          color="#4fa94d"
-          ariaLabel="ball-triangle-loading"
-          wrapperClass={{}}
-          wrapperStyle=""
-          visible={true} /></div>}
+    </div> : <div className=' w-100 vh-100 d-flex justify-content-center align-items-center'><BallTriangle
+      height={100}
+      width={100}
+      radius={5}
+      color="#4fa94d"
+      ariaLabel="ball-triangle-loading"
+      wrapperClass={{}}
+      wrapperStyle=""
+      visible={true} /></div>}
   </>
 }

@@ -1,10 +1,10 @@
-import React, { useContext} from 'react'
+import React, { useContext } from 'react'
 import Style from './UpdatePassword.module.css'
 import { Helmet } from "react-helmet";
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { toast, ToastContainer } from "react-toastify";
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { UserTokenContext } from "../../Context/UserTokenContext";
 
 

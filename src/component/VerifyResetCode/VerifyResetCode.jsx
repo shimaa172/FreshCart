@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react'
-import Style from './VerifyResetCode.css'
+import React, { useState } from 'react'
+import Style from './VerifyResetCode.module.css'
 import { useFormik } from 'formik'
 import axios from 'axios'
 import { ThreeDots } from 'react-loader-spinner'
@@ -44,10 +44,10 @@ export default function VerifyResetCode() {
 
   return <>
     <ToastContainer />
-    <div className={`bg-main-light rounded py-3 shadow mx-auto ${Style.change_width}`}>
+    <div className={`${Style.change_width} bg-main-light  mx-auto rounded shadow py-3`}>
       <h1 className="text-center h3">Forgot Password</h1>
       {error ? <div className="alert alert-danger">{error}</div> : ''}
-      <form onSubmit={Formik.handleSubmit} className='vstack gap-3 w-75 mx-auto '>
+      <form onSubmit={Formik.handleSubmit} className='gap-3'>
         <label htmlFor="resetCode">Reset Code:</label>
         <input onChange={Formik.handleChange} onBlur={Formik.handleBlur} placeholder='Your Reset Code...' value={Formik.values.resetCode} id="resetCode" type="text" name="resetCode" className="form-control " />
         {Formik.errors.resetCode && Formik.touched.resetCode ? <div className="alert alert-danger">{Formik.errors.resetCode}</div> : ''}

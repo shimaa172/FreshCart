@@ -40,7 +40,7 @@ export default function Login() {
       }, 3000);
     }
   }
-  
+
 
   let validationSchema = Yup.object({
     email: Yup.string('email inValid').required('email is required'),
@@ -85,7 +85,7 @@ export default function Login() {
                 visible={true}
               />
             </button>}
-          <Link id='link' className='mt-4'  to={'/forgot'}>ForgotPassword</Link>
+          <Link id='link' className='mt-4' to={'/forgot'}>ForgotPassword</Link>
         </div>
       </form>
     </div>
