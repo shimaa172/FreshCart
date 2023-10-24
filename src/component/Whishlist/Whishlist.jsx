@@ -94,24 +94,7 @@ export default function Whishlist() {
                           EGP{product.price}.00{" "}
                         </span>
                         <div className="d-flex">
-                          <ul className="d-flex mb-0 list-unstyled">
-                            <li className="ng-star-inserted">
-                              <i className="fas fa-star rating-color ng-star-inserted"></i>
-                            </li>
-                            <li className="ng-star-inserted">
-                              <i className="fas fa-star rating-color ng-star-inserted"></i>
-                            </li>
-                            <li className="ng-star-inserted">
-                              <i className="fas fa-star rating-color ng-star-inserted"></i>
-                            </li>
-                            <li className="ng-star-inserted">
-                              <i className="fas fa-star rating-color ng-star-inserted"></i>
-                            </li>
-                            <li className="ng-star-inserted"></li>
-                            <li className="ng-star-inserted">
-                              <i className="fas fa-star-half rating-color"></i>
-                            </li>
-                          </ul>
+                          <i className="fas fa-star rating-color "></i>
                           <span className="small text-black">
                             {product.ratingsAverage}
                           </span>
