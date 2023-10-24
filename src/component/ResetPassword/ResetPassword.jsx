@@ -21,7 +21,7 @@ export default function ResetPassword() {
       setUserToken(data.data.token)
       toast.success("🦄 Done successfully!", { autoClose: 2000 });
       setTimeout(() => {
-        navigate('/FreshCart/')
+        navigate('/')
       }, 3000);
     }
   }
