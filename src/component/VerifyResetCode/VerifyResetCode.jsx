@@ -27,7 +27,7 @@ export default function VerifyResetCode() {
       setLoading(false)
       toast.success("🦄 Next reset your password", { autoClose: 2000 });
       setTimeout(() => {
-        navigate('/FreshCart/resetPassword')
+        navigate('/resetPassword')
       }, 3000);
     }
   }
@@ -44,10 +44,10 @@ export default function VerifyResetCode() {
 
   return <>
     <ToastContainer />
-    <div className={`${Style.change_width} bg-main-light rounded py-3 shadow mx-auto`}>
+    <div className={`bg-main-light rounded py-3 shadow mx-auto ${Style.change_width}`}>
       <h1 className="text-center h3">Forgot Password</h1>
       {error ? <div className="alert alert-danger">{error}</div> : ''}
-      <form onSubmit={Formik.handleSubmit} className='vstack gap-3'>
+      <form onSubmit={Formik.handleSubmit} className='vstack gap-3 w-75 mx-auto '>
         <label htmlFor="resetCode">Reset Code:</label>
         <input onChange={Formik.handleChange} onBlur={Formik.handleBlur} placeholder='Your Reset Code...' value={Formik.values.resetCode} id="resetCode" type="text" name="resetCode" className="form-control " />
         {Formik.errors.resetCode && Formik.touched.resetCode ? <div className="alert alert-danger">{Formik.errors.resetCode}</div> : ''}

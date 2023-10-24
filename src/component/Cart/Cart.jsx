@@ -154,7 +154,7 @@ export default function Cart() {
                   </div>
                 ))}
                 <Link
-                  to={`/FreshCart/checkout/${cartItems.data._id}`}
+                  to={`/checkout/${cartItems.data._id}`}
                   className="text-decoration-none"
                 >
                   <button className="btn text-white bg-main py-0" tabIndex="0">
@@ -164,7 +164,7 @@ export default function Cart() {
                 </Link>
               </div>
               <div className="border rounded shadow-sm p-3 mt-5 mx-auto w-50">
-                <Link to={`/FreshCart/allorders`} className="text-decoration-none">
+                <Link to={`/allorders`} className="text-decoration-none">
                   <button className="btn text-white bg-main w-100" tabIndex="0">
                     My Orders
                   </button>

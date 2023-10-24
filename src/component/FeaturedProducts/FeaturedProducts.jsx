@@ -87,7 +87,7 @@ export default function FeaturedProducts() {
                   <i onClick={() => PostWhishlist(product.id)} className="fas fa-heart fs-1 text-main"></i>
                 </span>
                 <Link
-                  to={`/FreshCart/productDetails/${product.id}`}
+                  to={`/productDetails/${product.id}`}
                   className="text-decoration-none"
                 >
                   <div className={`cursor-pointer ${Style.product_details}`}>

@@ -27,7 +27,7 @@ export default function Register() {
       setLoading(false)
       toast.success("🦄You have been Registered", { autoClose: 2000 });
       setTimeout(() => {
-        navigate('/FreshCart/login');
+        navigate('/login');
       }, 3000);
 
     }

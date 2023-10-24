@@ -1,5 +1,5 @@
 import React from 'react'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createHashRouter } from 'react-router-dom'
 import Home from './component/Home/Home'
 import Layout from './component/Layout/Layout'
 import Categories from './component/Categories/Categories'
@@ -36,8 +36,8 @@ import { store } from './Redux/Store'
 
 
 export default function App() {
-  let routers = createBrowserRouter([
-    {path: '/FreshCart/', element: <Layout />, children:[
+  let routers = createHashRouter([
+    {path: '/', element: <Layout />, children:[
     {index:true, element: <ProtectedRoute><Home /></ProtectedRoute> },
     { path: 'products', element: <ProtectedRoute><Products /></ProtectedRoute> },
     { path: 'productDetails/:id', element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },

@@ -30,7 +30,7 @@ export default function Categories() {
   wrapperStyle=""
   visible={true}/></div>:<div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 justify-content-center">
     {data?.data.data.map((category)=> <div className='' key={category._id}>
-      <Link to={`/FreshCart/categoriesDetails/${category._id}`} className='text-decoration-none'>
+      <Link to={`/categoriesDetails/${category._id}`} className='text-decoration-none'>
       <div className='p-2'>
         <div className={`cursor-pointer ${Style.product_details}`}>
           <div className='card'>

@@ -34,7 +34,7 @@ export default function Brands() {
       <div>
         <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4'>
           {brands.map((brand) =>
-            <Link key={brand._id} to={`/FreshCart/brandDetails/${brand._id}`} className='text-decoration-none'>
+            <Link key={brand._id} to={`/brandDetails/${brand._id}`} className='text-decoration-none'>
               <div role="button" className='col'>
                 <div className='card'>
                   <img className='card-img-top' src={brand.image} alt={brand.name} />
