@@ -17,7 +17,7 @@ export default function UpdatePassword() {
     if (data.message == 'success') {
       toast.success("🦄Your password is updated successfully!", { autoClose: 2000 });
       setTimeout(() => {
-        navigate('login');
+        navigate('/FreshCart/login');
       }, 3000);
 
     }

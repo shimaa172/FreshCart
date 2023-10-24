@@ -17,7 +17,7 @@ export default function Navbar() {
   function SignOut() {
     localStorage.removeItem('userToken')
     setUserToken(null)
-    navigate('/login')
+    navigate('/FreshCart/login')
   }
 
   return <>

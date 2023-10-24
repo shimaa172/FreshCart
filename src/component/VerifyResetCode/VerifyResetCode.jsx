@@ -44,7 +44,7 @@ export default function VerifyResetCode() {
 
   return <>
     <ToastContainer />
-    <div className={`${Style.change_width} bg-main-light rounded py-3 shadow mx-auto`}>
+    <div className={`${Style.change_width}  bg-main-light rounded py-3 shadow mx-auto`}>
       <h1 className="text-center h3">Forgot Password</h1>
       {error ? <div className="alert alert-danger">{error}</div> : ''}
       <form onSubmit={Formik.handleSubmit} className='vstack gap-3'>
