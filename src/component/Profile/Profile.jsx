@@ -68,6 +68,7 @@ export default function Profile() {
   return <>
     <Helmet>
       <meta charSet="utf-8" />
+      <link rel="shortcut icon" href="../../../src/assets/favicon_io/favicon.ico"></link>
       <title>Profile</title>
     </Helmet>
     <div>

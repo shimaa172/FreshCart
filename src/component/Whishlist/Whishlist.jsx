@@ -58,6 +58,7 @@ export default function Whishlist() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
+        <link rel="shortcut icon" href="../../../src/assets/favicon_io/favicon.ico"></link>
         <title>Whishlist</title>
       </Helmet>
       {WhishlistItems? <>{WhishlistItems.data.length ?

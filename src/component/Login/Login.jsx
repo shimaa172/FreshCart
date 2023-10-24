@@ -57,6 +57,7 @@ export default function Login() {
   return <>
     <Helmet>
       <meta charSet="utf-8" />
+      <link rel="shortcut icon" href="../../../src/assets/favicon_io/favicon.ico"></link>
       <title>Login</title>
     </Helmet>
     <ToastContainer />

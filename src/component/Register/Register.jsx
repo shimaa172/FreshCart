@@ -55,6 +55,7 @@ export default function Register() {
   return <>
     <Helmet>
       <meta charSet="utf-8" />
+      <link rel="shortcut icon" href="../../../src/assets/favicon_io/favicon.ico"></link>
       <title>Register</title>
     </Helmet>
     <ToastContainer />

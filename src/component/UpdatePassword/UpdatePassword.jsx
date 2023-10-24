@@ -41,6 +41,7 @@ export default function UpdatePassword() {
   return <>
     <Helmet>
       <meta charSet="utf-8" />
+      <link rel="shortcut icon" href="../../../src/assets/favicon_io/favicon.ico"></link>
       <title>UpdatePassword</title>
     </Helmet>
     <ToastContainer />

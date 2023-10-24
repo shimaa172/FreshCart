@@ -17,6 +17,7 @@ export default function Categories() {
   return <>
   <Helmet>
     <meta charSet="utf-8" />
+    <link rel="shortcut icon" href="../../../src/assets/favicon_io/favicon.ico"></link>
     <title>Categories</title>
   </Helmet>
   {isLoading?<div className=' w-100 vh-100 d-flex justify-content-center align-items-center'><BallTriangle

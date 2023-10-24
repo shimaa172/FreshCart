@@ -46,6 +46,7 @@ export default function ProductDetails() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
+        <link rel="shortcut icon" href="../../../src/assets/favicon_io/favicon.ico"></link>
         <title>{data?.data.data.title}</title>
       </Helmet>
       {isLoading ? (

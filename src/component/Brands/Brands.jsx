@@ -19,6 +19,7 @@ export default function Brands() {
   return <>
     <Helmet>
       <meta charSet="utf-8" />
+      <link rel="shortcut icon" href="../../../src/assets/favicon_io/favicon.ico"></link>
       <title>Brands</title>
     </Helmet>
     {loading ? <div className=' w-100 vh-100 d-flex justify-content-center align-items-center'><BallTriangle
