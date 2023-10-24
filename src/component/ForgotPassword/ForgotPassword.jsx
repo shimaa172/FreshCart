@@ -18,7 +18,7 @@ export default function ForgotPassword() {
     if (data.statusMsg === 'success') {
       toast.success("🦄 Next reset code sent to your email!", { autoClose: 2000 });
       setTimeout(() => {
-        navigate('/verifyCode')
+        navigate('/FreshCart/verifyCode')
       }, 3000);
     }
   }

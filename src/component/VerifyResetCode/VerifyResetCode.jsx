@@ -27,7 +27,7 @@ export default function VerifyResetCode() {
       setLoading(false)
       toast.success("🦄 Next reset your password", { autoClose: 2000 });
       setTimeout(() => {
-        navigate('/resetPassword')
+        navigate('/FreshCart/resetPassword')
       }, 3000);
     }
   }
