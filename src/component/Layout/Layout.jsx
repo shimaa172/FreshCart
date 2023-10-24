@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import Style from './Layout.module.css'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
-import { Outlet } from 'react-router-dom'
+import { Outlet} from 'react-router-dom'
 import { UserTokenContext } from '../../Context/UserTokenContext'
 
 export default function Layout() {
@@ -22,7 +22,8 @@ export default function Layout() {
     window.onbeforeunload = () => { return "" };
         
     // Unmount the window.onbeforeunload event
-    return () => { window.onbeforeunload = null };
+    return () => { window.onbeforeunload = null 
+    };
     
 
   }, [])

@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useEffect } from "react";
 import axios from 'axios';
 import jwt_decode from "jwt-decode";
 
@@ -30,7 +30,7 @@ export default function OrderContextProvider(props) {
     async function checkout(cartId,shippingAddress) {
         
         try {
-            const res = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://shimaa172.github.io`,
+            const res = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://shimaa172.github.io/FreshCart`,
                 {
                     shippingAddress
                 },
@@ -42,7 +42,6 @@ export default function OrderContextProvider(props) {
             return err;
         }
     }
-
     return <OrderContext.Provider value={{ id, checkout, getUserOrders }}>
         {props.children}
     </OrderContext.Provider>

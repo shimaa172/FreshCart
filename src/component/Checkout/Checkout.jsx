@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import Style from './Checkout.module.css'
 import { Helmet } from "react-helmet";
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { toast, ToastContainer } from "react-toastify";
 import {OrderContext} from "../../Context/OrderContext"
-import { useParams } from 'react-router-dom'
+import {useParams } from 'react-router-dom'
 
 
 export default function Checkout() {
