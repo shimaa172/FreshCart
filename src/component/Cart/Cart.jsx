@@ -8,16 +8,10 @@ import { Helmet } from "react-helmet";
 import toast from "react-hot-toast";
 
 export default function Cart() {
-  let {
-    getCart,
-    removeCartItem,
-    updateCartItem,
-    clearCartItem,
-    setnumOfCartItems,
-  } = useContext(CartContext);
+  let {getCart,removeCartItem,updateCartItem,clearCartItem,setnumOfCartItems} = useContext(CartContext);
   const [cartItems, setcartItems] = useState(null);
-  const [loading, setLoading] = useState(false);
-
+  const [clr, setClr] = useState(null);
+  
   async function removeItem(id) {
     let { data } = await removeCartItem(id);
     setcartItems(data);
@@ -27,11 +21,12 @@ export default function Cart() {
         position: "bottom-right",
       });
 
-      if (data.numOfCartItems === 0) {
+      if (data.numOfCartItems == 0) {
         setnumOfCartItems(null);
       } else {
         setnumOfCartItems(data.numOfCartItems);
       }
+
     }
   }
 
@@ -39,17 +34,12 @@ export default function Cart() {
   async function clearCartItems() {
     let { data } = await clearCartItem();
     if (data.message === "success") {
-      setLoading(false); // ✅
+      setClr(true)
       toast.success("Your cart cleared successfully", {
         duration: 5000,
         position: "bottom-right",
       });
-      // setnumOfCartItems(0); // ✅
-      if (data.numOfCartItems === 0) {
-        setnumOfCartItems(null);
-      } else {
-        setnumOfCartItems(data.numOfCartItems);
-      }
+      setnumOfCartItems(data.numOfCartItems)
     }
     setcartItems(null); // ✅
   }
@@ -60,19 +50,19 @@ export default function Cart() {
   }
 
   async function getCartItems() {
-    setLoading(true);
     let { data } = await getCart();
     setcartItems(data);
     if (data?.status === "success") {
-      setLoading(false);
-      if (data.numOfCartItems === 0) {
+      if (data.numOfCartItems == 0) {
         setnumOfCartItems(null);
       } else {
         setnumOfCartItems(data.numOfCartItems);
       }
+    } 
+    else{
+      setClr(true)
     }
   }
-
   useEffect(() => {
     getCartItems();
   }, []);
@@ -84,9 +74,7 @@ export default function Cart() {
         <link rel="shortcut icon" href="../../../src/assets/favicon_io/favicon.ico"></link>
         <title>Cart</title>
       </Helmet>
-      {!loading ? (
-        <>
-          {cartItems && cartItems.data.products.length ? (
+      {cartItems ? <>{cartItems.data.products.length  ? (
             <>
               <div
                 className={`${Style.cart} bg-main-light py-4 mx-auto rounded shadow`}
@@ -175,10 +163,7 @@ export default function Cart() {
             <h1 className="text-center my-3 display-3">
               Your cart Is Empty...
             </h1>
-          )}
-        </>
-      ) : (
-        <div className=" w-100 vh-100 d-flex justify-content-center align-items-center">
+          )}</>: <>{ clr ? <h1 className="text-center my-3 display-3">Your cart Is Empty...</h1>:<div className=" w-100 vh-100 d-flex justify-content-center align-items-center">
           <BallTriangle
             height={100}
             width={100}
@@ -189,8 +174,7 @@ export default function Cart() {
             wrapperStyle=""
             visible={true}
           />
-        </div>
-      )}
+        </div>}</>}
     </>
   );
 }
